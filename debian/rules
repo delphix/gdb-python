@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+SOURCE_NAME := $(shell dpkg-parsechangelog | sed -rne "s,^Source: (.*),\1,p")
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- --with-python=/usr/bin/python3.6
+
+override_dh_auto_build:
+	$(MAKE) all-gdb
+
+override_dh_auto_install:
+	$(MAKE) install-gdb DESTDIR=$(CURDIR)/debian/$(SOURCE_NAME)
+
+override_dh_auto_test:
