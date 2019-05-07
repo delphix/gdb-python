@@ -1,0 +1,10 @@
+Source: gdb-python
+Section: misc
+Priority: optional
+Maintainer: Delphix Engineering <eng@delphix.com>
+Standards-Version: 4.1.2
+
+Package: gdb-python
+Conflicts: gdb, gdbserver
+Architecture: any
+Description: Python extensions to GDB
