@@ -13,5 +13,6 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	$(MAKE) install-gdb DESTDIR=$(CURDIR)/debian/$(SOURCE_NAME)
+	rm $(CURDIR)/debian/$(SOURCE_NAME)/usr/share/info/dir
 
 override_dh_auto_test:
