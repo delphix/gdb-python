@@ -6,13 +6,14 @@ SOURCE_NAME := $(shell dpkg-parsechangelog | sed -rne "s,^Source: (.*),\1,p")
 	dh $@
 
 override_dh_auto_configure:
-	dh_auto_configure -- --with-python=/usr/bin/python3.6
+	dh_auto_configure -- \
+		--with-python=/usr/bin/python3.6 \
+		--prefix=/opt/gdb-python
 
 override_dh_auto_build:
 	$(MAKE) all-gdb
 
 override_dh_auto_install:
 	$(MAKE) install-gdb DESTDIR=$(CURDIR)/debian/$(SOURCE_NAME)
-	rm $(CURDIR)/debian/$(SOURCE_NAME)/usr/share/info/dir
 
 override_dh_auto_test:

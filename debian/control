@@ -6,6 +6,5 @@ Standards-Version: 4.1.2
 
 Package: gdb-python
 Depends: ${shlibs:Depends}
-Conflicts: gdb, gdbserver
 Architecture: any
 Description: Python extensions to GDB
