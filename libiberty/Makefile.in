@@ -477,7 +477,7 @@ stamp-h: $(srcdir)/config.in config.status Makefile
 config.status: $(srcdir)/configure
 	$(SHELL) ./config.status --recheck
 
-AUTOCONF = autoconf
+AUTOCONF = autoconf2.69
 configure_deps = $(srcdir)/aclocal.m4 \
 	$(srcdir)/../config/acx.m4 \
 	$(srcdir)/../config/no-executables.m4 \

@@ -206,7 +206,7 @@ include $(srcdir)/aclocal-m4-deps.mk
 $(srcdir)/aclocal.m4: @MAINTAINER_MODE_TRUE@ configure.ac $(aclocal_m4_deps)
 	cd $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
 
-AUTOCONF = autoconf
+AUTOCONF = autoconf2.69
 configure_deps = $(srcdir)/configure.ac $(srcdir)/aclocal.m4
 $(srcdir)/configure: @MAINTAINER_MODE_TRUE@ $(configure_deps)
 	cd $(srcdir) && $(AUTOCONF)

@@ -50204,7 +50204,7 @@ config.status: configure
 	CONFIG_SHELL="$(SHELL)" $(SHELL) ./config.status --recheck
 
 # Rebuilding configure.
-AUTOCONF = autoconf
+AUTOCONF = autoconf2.69
 $(srcdir)/configure: @MAINT@ $(srcdir)/configure.ac $(srcdir)/config/acx.m4 \
 	$(srcdir)/config/override.m4 $(srcdir)/config/proginstall.m4 \
 	$(srcdir)/config/elf.m4 $(srcdir)/config/isl.m4 \

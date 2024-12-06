@@ -3,7 +3,7 @@ Section: misc
 Priority: optional
 Maintainer: Delphix Engineering <eng@delphix.com>
 Build-Depends:
-	autoconf (= 2.69),
+	autoconf2.69,
 	automake,
 	bison,
 	dh-python,
