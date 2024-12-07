@@ -500,7 +500,7 @@ stamp-h: $(srcdir)/config.in config.status Makefile
 config.status: $(srcdir)/configure
 	$(SHELL) ./config.status --recheck
 
-AUTOCONF = autoconf
+AUTOCONF = autoconf2.69
 ACLOCAL = aclocal
 ACLOCAL_AMFLAGS = -I ../config -I ..
 aclocal_deps = \

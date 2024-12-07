@@ -3,18 +3,18 @@ Section: misc
 Priority: optional
 Maintainer: Delphix Engineering <eng@delphix.com>
 Build-Depends:
-	autoconf,
+	autoconf2.69,
 	automake,
 	bison,
 	dh-python,
 	flex,
 	git,
+	libkdumpfile-dev,
 	liblzo2-dev,
 	libmpfr-dev,
 	libsnappy1v5,
 	libtool,
 	pkg-config,
-	python3-distutils,
 	python3-future,
 	python3-pyelftools,
 	python3-dev,
