@@ -9,7 +9,7 @@ Build-Depends:
 	dh-python,
 	flex,
 	git,
-	libkdumpfile-dev,
+	libkdumpfile,
 	liblzo2-dev,
 	libmpfr-dev,
 	libsnappy1v5,
