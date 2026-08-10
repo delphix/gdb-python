@@ -15,7 +15,6 @@ Build-Depends:
 	libsnappy1v5,
 	libtool,
 	pkg-config,
-	python3-future,
 	python3-pyelftools,
 	python3-dev,
 	texinfo,
