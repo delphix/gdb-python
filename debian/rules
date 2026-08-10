@@ -2,6 +2,20 @@
 
 SOURCE_NAME := $(shell dpkg-parsechangelog | sed -rne "s,^Source: (.*),\1,p")
 
+#
+# This tree, and the readline it bundles, predate C23. GCC 15 defaults to
+# -std=gnu23, where an empty parameter list means (void) instead of
+# "unspecified", so readline's unprototyped termcap declarations turn every
+# call into an error:
+#
+#   display.c:2805:17: error: too many arguments to function 'tputs';
+#       expected 0, have 3
+#
+# Build the C sources to the standard they were written against. This applies
+# to CFLAGS only, so gdb's C++ is untouched.
+#
+export DEB_CFLAGS_MAINT_APPEND = -std=gnu17
+
 %:
 	dh $@ --with python3
 
